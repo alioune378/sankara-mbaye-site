@@ -36,8 +36,15 @@
     if (lang === "fr") u.searchParams.delete("lang"); else u.searchParams.set("lang", lang);
     history.replaceState(null, "", u.pathname + u.search + u.hash);
     updateSeoLinks();
-    renderTV(); renderPress(); renderSocials(); renderGallery(); renderCredit();
+    renderTV(); renderPress(); renderSocials(); renderGallery(); renderCredit(); renderTickers();
     clearFormErrors();
+  }
+
+  /* ---------- scrolling banners ---------- */
+  function renderTickers() {
+    var words = ["Sankara Mbaye"].concat(t("hero_small").split("•").map(function (w) { return w.trim(); }).filter(Boolean)).concat(["Diaspora", "Sénégal"]);
+    var one = words.map(function (w) { return "<span>" + esc(w) + '</span><span class="star">★</span>'; }).join("");
+    $$("[data-ticker]").forEach(function (el) { el.innerHTML = one + one + one + one; });
   }
 
   /* ---------- SEO links (only when the final domain is known) ---------- */

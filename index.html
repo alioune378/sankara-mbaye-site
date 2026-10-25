@@ -17,7 +17,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -56,6 +56,13 @@
 
   <!-- HERO -->
   <section class="hero" id="accueil" aria-labelledby="h-hero">
+    <span class="blob" aria-hidden="true"></span>
+    <span class="spark" style="top:12%;left:6%" aria-hidden="true"></span>
+    <span class="spark" style="top:22%;left:52%;animation-delay:.8s" aria-hidden="true"></span>
+    <span class="spark" style="top:68%;left:44%;animation-delay:1.6s" aria-hidden="true"></span>
+    <span class="spark" style="top:8%;right:8%;animation-delay:.4s" aria-hidden="true"></span>
+    <span class="spark" style="bottom:14%;right:4%;animation-delay:2s" aria-hidden="true"></span>
+    <span class="spark" style="bottom:20%;left:3%;animation-delay:1.2s" aria-hidden="true"></span>
     <div class="wrap hero-grid">
       <div class="hero-text reveal">
         <p class="eyebrow gold" data-i18n="hero_eyebrow">Bienvenue sur mon site officiel</p>
@@ -77,6 +84,8 @@
   </section>
 
   <!-- ABOUT -->
+  <div class="ticker" aria-hidden="true"><div class="ticker-track" data-ticker></div></div>
+
   <section class="about section-ivory" id="a-propos" aria-labelledby="h-about">
     <div class="wrap about-grid">
       <div class="about-photos reveal">
@@ -178,6 +187,8 @@
   </section>
 
   <!-- COLLABORATIONS -->
+  <div class="ticker alt" aria-hidden="true"><div class="ticker-track" data-ticker></div></div>
+
   <section class="collab section-dark" id="collaborations" aria-labelledby="h-col">
     <div class="wrap collab-grid">
       <figure class="collab-photo reveal"><img src="assets/img/waterfront.jpg" width="411" height="486" loading="lazy" alt="Sankara Mbaye en polo turquoise au bord de l’eau" data-i18n-alt="cap_col"></figure>
