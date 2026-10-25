@@ -393,3 +393,57 @@ h3{font-family:var(--sans);font-weight:800;letter-spacing:-.01em}
 
 html,body{overflow-x:clip}
 .ticker{margin-inline:0;width:104%;left:-2%}
+
+/* =====================================================================
+   SÉNÉGAL × USA — blend both flags (overrides the flashy theme above)
+   ===================================================================== */
+:root{
+  --us-navy:#0A3161; --us-blue:#2F6BFF; --us-red:#C8102E;
+  --night:#06142E; --night-2:#0A1E44; --night-3:#0F2A5C;
+  --pink:var(--us-red); --orange:var(--us-blue);
+  --flag:linear-gradient(90deg,var(--sn-green) 0 16.66%,var(--sn-yellow) 16.66% 33.33%,var(--sn-red) 33.33% 50%,var(--us-navy) 50% 62%,#fff 62% 66%,var(--us-red) 66% 74%,#fff 74% 78%,var(--us-red) 78% 86%,#fff 86% 90%,var(--us-red) 90% 100%);
+  --stars:radial-gradient(circle,rgba(255,255,255,.5) 0 1.3px,transparent 1.5px) 0 0/44px 44px;
+}
+.nav{background:rgba(6,20,46,.94)}
+.nav::after{height:5px;bottom:-5px}
+/* hero: Senegal green + US blue + US red glows, star field */
+.hero{background:var(--stars),var(--night)}
+.hero::before{background:var(--sn-green)}
+.hero::after{background:var(--us-red)}
+.hero .blob{background:var(--us-blue);opacity:.45}
+.hero-frame{background:conic-gradient(from 0deg,var(--sn-green),var(--sn-yellow),var(--sn-red),#fff,var(--us-blue),var(--us-red),var(--gold),var(--sn-green))}
+/* banners: Senegal yellow on top, US stars & stripes below */
+.ticker.alt{background:repeating-linear-gradient(180deg,var(--us-red) 0 10px,#B00D27 10px 20px);color:#fff;border-color:var(--us-navy)}
+.ticker.alt span{text-shadow:0 2px 0 rgba(0,0,0,.25)}
+.ticker.alt span.star{color:#fff}
+.ticker.alt{box-shadow:inset 0 0 0 0 transparent,0 10px 30px rgba(0,0,0,.18)}
+.ticker.alt::before{content:"";position:absolute;left:0;top:0;bottom:0;width:120px;background:var(--stars),var(--us-navy);background-size:18px 18px,auto;z-index:1;box-shadow:6px 0 12px rgba(0,0,0,.25)}
+/* about: dots in both flags' colors */
+.about{background:radial-gradient(circle at 1px 1px,rgba(47,107,255,.2) 1.5px,transparent 2px) 0 0/22px 22px,radial-gradient(circle at 12px 12px,rgba(0,166,81,.18) 1.5px,transparent 2px) 0 0/22px 22px,var(--ivory)}
+.about-inset{box-shadow:-10px 10px 0 var(--us-navy)}
+.pull{background:linear-gradient(120deg,var(--sn-green) 0%,#007A3D 45%,var(--us-navy) 100%)}
+/* world cards: yellow, US blue, green, red */
+.card:nth-child(2){--c:var(--us-blue)} .card:nth-child(2) h3{color:#1F4FD1}
+.card:nth-child(4){--c:var(--us-red)}
+/* TV */
+.tv{background:var(--stars),radial-gradient(700px 400px at 90% 0%,rgba(200,16,46,.35),transparent 60%),radial-gradient(700px 400px at 0% 100%,rgba(0,166,81,.35),transparent 60%),var(--night)}
+/* diaspora stays Senegal yellow, with US navy accents */
+.dia-main{box-shadow:12px 12px 0 var(--us-navy)}
+.dia-inset{box-shadow:-8px 8px 0 var(--us-red)}
+/* media */
+.pcard:nth-child(2){border-left-color:var(--us-blue)} .pcard:nth-child(3){border-left-color:var(--us-red)}
+.plink{border-bottom-color:var(--us-red)}
+/* gallery: navy + stars */
+.gallery{background:var(--stars),linear-gradient(160deg,var(--night) 0%,var(--night-3) 100%)}
+.gitem:nth-child(4n+2):hover{box-shadow:0 0 0 4px var(--us-red),0 0 30px rgba(200,16,46,.6)}
+.gitem:nth-child(4n+4):hover{box-shadow:0 0 0 4px var(--us-blue),0 0 30px rgba(47,107,255,.6)}
+/* collaborations: Senegal red → US navy */
+.collab{background:var(--stars),linear-gradient(135deg,var(--sn-red) 0%,var(--us-red) 45%,var(--us-navy) 100%)}
+.btn-ghost:hover{background:var(--us-red);border-color:var(--us-red)}
+/* contact + social + footer */
+.contact{background:radial-gradient(circle at 1px 1px,rgba(10,49,97,.16) 1.5px,transparent 2px) 0 0/22px 22px,var(--ivory)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--us-blue);box-shadow:0 0 0 4px rgba(47,107,255,.18)}
+.social .h2{background:linear-gradient(90deg,var(--sn-green),var(--sn-yellow) 30%,var(--sn-red) 50%,var(--us-blue) 75%,var(--us-red));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sbtn{background:var(--us-navy)} .sbtn:hover{background:var(--us-red)}
+.footer{background:var(--stars),var(--night)}
+.footer::before{height:6px}

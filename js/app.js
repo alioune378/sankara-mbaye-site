@@ -42,7 +42,7 @@
 
   /* ---------- scrolling banners ---------- */
   function renderTickers() {
-    var words = ["Sankara Mbaye"].concat(t("hero_small").split("•").map(function (w) { return w.trim(); }).filter(Boolean)).concat(["Diaspora", "Sénégal"]);
+    var words = ["Sankara Mbaye"].concat(t("hero_small").split("•").map(function (w) { return w.trim(); }).filter(Boolean)).concat(["Dakar", "New York", "Sénégal", "USA", "Diaspora"]);
     var one = words.map(function (w) { return "<span>" + esc(w) + '</span><span class="star">★</span>'; }).join("");
     $$("[data-ticker]").forEach(function (el) { el.innerHTML = one + one + one + one; });
   }
