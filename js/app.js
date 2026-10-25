@@ -37,6 +37,7 @@
     history.replaceState(null, "", u.pathname + u.search + u.hash);
     updateSeoLinks();
     renderTV(); renderSocials(); renderGallery(); renderCredit(); renderTickers();
+    var mb2 = $("#aboutMore"); if (mb2) mb2.textContent = t(mb2.getAttribute("aria-expanded") === "true" ? "read_less" : "read_more");
     clearFormErrors();
   }
 
@@ -215,7 +216,17 @@
     $("#privacyClose").addEventListener("click", function () { if (dlg.close) dlg.close(); else dlg.removeAttribute("open"); });
   }
 
+  function initMore() {
+    var b = $("#aboutMore"); if (!b) return;
+    b.addEventListener("click", function () {
+      var open = b.getAttribute("aria-expanded") !== "true";
+      b.setAttribute("aria-expanded", String(open));
+      $(".about-text").classList.toggle("expanded", open);
+      b.textContent = t(open ? "read_less" : "read_more");
+    });
+  }
   document.addEventListener("DOMContentLoaded", function () {
+    initMore();
     initNav(); initLightbox(); initPrivacy(); initForm();
     applyLang(initialLang());
     initReveal();

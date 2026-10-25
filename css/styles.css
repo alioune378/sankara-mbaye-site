@@ -497,3 +497,23 @@ a{color:var(--gold-l)}
 .offers strong{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.03em;font-size:20px;color:var(--gold-l)}
 .offers span{color:#BDB8AD;font-size:14.5px;line-height:1.55}
 @media (max-width:640px){.offers{grid-template-columns:1fr}}
+
+/* refinements: softer glow, warmer text, mobile order, read more */
+:root{--ink:#090909;--gold:#C9A35B;--sparkle-bg:radial-gradient(circle,rgba(232,211,162,.14) 0 1px,transparent 1.3px) 0 0/56px 56px}
+body{background:#090909}
+p,.lede,.about-text p,.dia-text p,.diaspora .dia-text p,.card-body p,.pcard p,.note,.fine,.soon,.foot-tags,.hero-p,.light-p,.lede.light,.offers span{color:#D0CDC6!important}
+.hero-name{filter:drop-shadow(0 4px 10px rgba(201,163,91,.2))}
+.hero-frame{box-shadow:0 0 24px rgba(201,163,91,.15)}
+.tv-photo img{box-shadow:0 0 0 1px var(--gold),0 0 24px rgba(201,163,91,.12)}
+.hero::before{opacity:.18!important}
+.hero::after{opacity:.1!important}
+.btn-gold{box-shadow:0 6px 18px rgba(201,163,91,.2)}
+.more-btn{display:none;background:none;border:0;border-bottom:1px solid var(--gold);color:#E6CF9A;font:600 14px var(--sans);letter-spacing:.04em;padding:4px 0;margin:0 0 18px;cursor:pointer}
+@media (max-width:860px){
+  .hero-photo{order:0!important;width:min(70%,300px);margin-top:8px}
+}
+@media (max-width:640px){
+  .about-text .more{display:none}
+  .about-text.expanded .more{display:block}
+  .more-btn{display:inline-block}
+}

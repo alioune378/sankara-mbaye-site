@@ -135,7 +135,7 @@ window.T = {
     w3_t: "Culture & identité", w3_d: "Un attachement à mes racines sénégalaises, à nos traditions et à cette richesse culturelle que nous partageons au-delà des frontières.",
     w4_t: "Société & actualité", w4_d: "Des réflexions, des échanges et des opinions personnelles sur les sujets qui font l’actualité au Sénégal et dans la diaspora.",
 
-    tv_tiktok_t: "Mes dernières vidéos",
+    tv_tiktok_t: "Mes dernières vidéos", read_more: "Lire la suite", read_less: "Réduire",
     tv_tiktok_p: "Regardez mes vidéos directement ici, et abonnez-vous pour ne rien manquer.",
     col_lead: "Marques, organisateurs, médias et associations : travaillons ensemble pour toucher une communauté sénégalaise engagée, au pays et dans la diaspora.",
     off1_t: "Contenu sponsorisé", off1: "Présenter votre marque, votre produit ou votre service dans des vidéos pensées pour ma communauté.",
@@ -243,7 +243,7 @@ window.T = {
     w3_t: "Culture & Identity", w3_d: "A connection to my Senegalese roots, our traditions, and the cultural heritage we share across borders.",
     w4_t: "Society & Current Affairs", w4_d: "Reflections, conversations, and personal perspectives on issues shaping Senegal and its diaspora.",
 
-    tv_tiktok_t: "My latest videos",
+    tv_tiktok_t: "My latest videos", read_more: "Read more", read_less: "Show less",
     tv_tiktok_p: "Watch my videos right here, and follow me so you never miss one.",
     col_lead: "Brands, event organizers, media and associations: let’s work together to reach an engaged Senegalese community, at home and across the diaspora.",
     off1_t: "Sponsored content", off1: "Feature your brand, product or service in videos made for my community.",
