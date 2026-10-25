@@ -389,3 +389,102 @@ a{color:var(--fuchsia-d)}
 .foot-sub{color:#E9D9A8}
 .foot-right a,.linklike{color:#FFE680}
 .privacy{background:#fff}
+
+/* =====================================================================
+   PURE BLACK & METALLIC GOLD — final luxury layer (overrides above)
+   ===================================================================== */
+:root{
+  --ink:#0A0A0A; --ink-2:#111111; --ink-3:#161616;
+  --gold:#C9A45C; --gold-l:#E8D3A2; --gold-d:#9A7A3E; --gold-text:#C9A45C;
+  --fuchsia:#C9A45C; --fuchsia-d:#9A7A3E;
+  --bling:linear-gradient(100deg,#8C6A2E 0%,#C9A45C 22%,#F1E2B8 40%,#B88E46 58%,#E3C98E 78%,#8C6A2E 100%);
+  --sparkle-bg:radial-gradient(circle,rgba(232,211,162,.22) 0 1px,transparent 1.3px) 0 0/52px 52px;
+  --line-gold:rgba(201,164,92,.35);
+}
+body{background:var(--ink);color:#E9E6DF}
+/* every section black */
+.hero,.about,.world,.tv,.diaspora,.media,.gallery,.collab,.contact,.social,.footer,.section-dark,.section-ivory,.section-warm{background:var(--sparkle-bg),var(--ink)!important;color:#E9E6DF}
+.world,.media,.collab,.social{background:var(--ink-2)!important}
+section+section,.ticker+section{border-top:1px solid var(--line-gold)}
+/* glows: soft gold only */
+.hero::before{background:#9A7A3E;opacity:.28}
+.hero::after{background:#C9A45C;opacity:.16}
+.hero .blob{opacity:0}
+/* type */
+.h2,.diaspora .h2,.social .h2{color:#fff!important;-webkit-text-fill-color:#fff;background:none!important}
+.gallery .h2{-webkit-text-fill-color:transparent;background:var(--bling)!important;background-size:200% auto!important;-webkit-background-clip:text!important;background-clip:text!important}
+p,.lede,.about-text p,.dia-text p,.diaspora .dia-text p,.card-body p,.pcard p,.note,.fine,.soon,.foot-tags,.hero-p,.light-p,.lede.light{color:#BDB8AD!important}
+.hero-tagline{color:var(--gold-l)!important}
+.hero-small,.brand-sub,.foot-sub{color:var(--gold)!important}
+.card-body h3,.card:nth-child(n) h3,.pcard h3,.tv-empty h3{color:#fff!important}
+.poutlet{color:var(--gold)}
+a{color:var(--gold-l)}
+/* labels */
+.eyebrow,.eyebrow.gold,.eyebrow.green,.diaspora .eyebrow.green,.collab .eyebrow.gold{background:transparent!important;color:var(--gold)!important;border:1px solid var(--gold);animation:none!important}
+/* buttons */
+.btn-gold{background:var(--bling);background-size:200% auto;color:#0A0A0A;box-shadow:0 8px 26px rgba(201,164,92,.28)}
+.btn-gold:hover{box-shadow:0 12px 34px rgba(201,164,92,.4)}
+.btn-green{background:transparent;color:var(--gold-l);border:1.5px solid var(--gold);box-shadow:none}
+.btn-green:hover{background:var(--bling);background-size:200% auto;color:#0A0A0A}
+.btn-ghost{border-color:var(--gold-l);color:var(--gold-l)}
+.btn-ghost:hover{background:var(--gold);border-color:var(--gold);color:#0A0A0A}
+/* nav */
+.nav{background:rgba(10,10,10,.95)}
+.nav::after{height:1px;bottom:-1px;background:var(--bling)}
+.nav-links a{color:#D8D3C8}
+.nav-links a:hover{color:var(--gold-l);border-color:var(--gold)}
+.lang{border-color:var(--line-gold)}
+.lang-btn{color:#D8D3C8}
+.lang-btn[aria-pressed="true"]{background:var(--gold);color:#0A0A0A}
+.menu-btn{border-color:var(--line-gold)}
+/* photo frames: thin gold, no colored blocks */
+.hero-frame{inset:-8px;border-radius:34px;background:var(--bling);box-shadow:0 0 40px rgba(201,164,92,.25)}
+.hero-photo img{border-color:#0A0A0A}
+.about-main,.dia-main,.media-photo img{box-shadow:0 0 0 1px var(--gold),12px 12px 0 -1px rgba(201,164,92,.18)!important}
+.about-inset,.dia-inset{border:4px solid #0A0A0A!important;box-shadow:0 0 0 1px var(--gold),0 18px 40px rgba(0,0,0,.6)!important}
+.tv-photo img{box-shadow:0 0 0 1px var(--gold),0 0 40px rgba(201,164,92,.2)}
+.collab-photo img{border:4px solid #0A0A0A}
+.collab-photo::after{background:none;border:1px solid var(--gold);inset:14px -14px -14px 14px}
+.pull{background:transparent!important;color:var(--gold-l)!important;border:0!important;border-left:3px solid var(--gold)!important;box-shadow:none!important;border-radius:0;padding:6px 0 6px 22px;font-weight:600;font-style:italic}
+/* banners */
+.ticker,.ticker.alt{background:#0A0A0A;color:var(--gold-l);border-block:1px solid var(--gold);box-shadow:none}
+.ticker span.star,.ticker.alt span.star{color:var(--gold)}
+/* cards */
+.card{background:var(--ink-3);box-shadow:none;border:1px solid var(--line-gold)}
+.card::before,.card:nth-child(odd)::before{background:var(--bling)!important;height:3px}
+.card:hover{box-shadow:0 18px 40px rgba(0,0,0,.6);border-color:var(--gold)}
+/* TV */
+.tv-empty{border:1px solid var(--line-gold);background:var(--ink-3)}
+.filter{border-color:var(--line-gold);color:#D8D3C8}
+.filter[aria-pressed="true"]{background:var(--gold);color:#0A0A0A;border-color:var(--gold)}
+.vcard{background:var(--ink-3);border-color:var(--line-gold)}
+.vthumb::after{background-color:var(--gold)}
+.vcat{color:var(--gold)}
+/* press */
+.pcard{background:var(--ink-3);border:1px solid var(--line-gold)!important;border-left:3px solid var(--gold)!important;box-shadow:none}
+.pcard:hover{border-color:var(--gold)!important;box-shadow:0 14px 30px rgba(0,0,0,.5)}
+.pkind{background:transparent;color:var(--gold);border:1px solid var(--line-gold)}
+.plink{color:var(--gold-l);border-bottom-color:var(--gold)}
+/* gallery */
+.gitem{box-shadow:0 0 0 1px var(--line-gold)}
+.gitem:nth-child(n):hover{box-shadow:0 0 0 2px var(--gold),0 0 30px rgba(201,164,92,.35)}
+/* chips */
+.chips li{background:transparent;border:1px solid var(--gold);color:var(--gold-l)}
+/* form */
+.form{background:var(--ink-3);border:1px solid var(--line-gold);box-shadow:none}
+.form::before{height:3px;background:var(--bling)}
+.field label{color:#E9E6DF}
+.field input,.field select,.field textarea{background:#0E0E0E;border:1px solid #3A3328;color:#F2EEE6}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,164,92,.18)}
+.err,.form-status.bad{color:#E58C7A}
+.form-status.ok{color:var(--gold-l)}
+/* social + footer */
+.social-wrap{border-top-color:var(--line-gold)}
+.sbtn{background:transparent;border:1px solid var(--gold);color:var(--gold-l)}
+.sbtn:hover{background:var(--gold);color:#0A0A0A}
+.footer::before{height:1px;background:var(--bling)}
+.foot-right,.foot-right p{color:#9E998F}
+.foot-right a,.linklike{color:var(--gold-l)}
+/* privacy + lightbox */
+.privacy{background:var(--ink-3);color:#E9E6DF;border:1px solid var(--line-gold)}
+.privacy h2{color:#fff}
