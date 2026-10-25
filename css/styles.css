@@ -447,3 +447,74 @@ html,body{overflow-x:clip}
 .sbtn{background:var(--us-navy)} .sbtn:hover{background:var(--us-red)}
 .footer{background:var(--stars),var(--night)}
 .footer::before{height:6px}
+
+/* =====================================================================
+   USA-DOMINANT (Senegal as accent) — overrides everything above
+   ===================================================================== */
+:root{
+  --ivory:#F6F8FD; --warm:#EEF2FB;
+  --flag:linear-gradient(90deg,var(--us-red) 0 10%,#fff 10% 14%,var(--us-red) 14% 24%,#fff 24% 28%,var(--us-red) 28% 38%,#fff 38% 42%,var(--us-red) 42% 52%,#fff 52% 56%,var(--us-red) 56% 66%,var(--us-navy) 66% 82%,var(--sn-green) 82% 88%,var(--sn-yellow) 88% 94%,var(--sn-red) 94% 100%);
+}
+body{background:var(--ivory)}
+/* labels */
+.eyebrow.gold{background:var(--us-red);color:#fff}
+.eyebrow.green{background:var(--us-navy);color:#fff}
+.brand-sub,.foot-sub{color:#fff}
+.lang-btn[aria-pressed="true"]{background:var(--us-red);color:#fff}
+.nav-links a:hover{color:#fff;border-color:var(--us-red)}
+/* hero: red / white / blue glows */
+.hero::before{background:var(--us-blue)}
+.hero::after{background:var(--us-red)}
+.hero .blob{background:#7FA6FF;opacity:.3}
+.hero-tagline{color:#fff}
+.hero-frame{background:conic-gradient(from 0deg,var(--us-red),#fff,var(--us-blue),var(--us-red),#fff,var(--us-blue),var(--gold),var(--us-red))}
+/* banners: first = navy with white stars, second = stripes */
+.ticker{background:var(--stars),var(--us-navy);color:#fff;border-color:#fff}
+.ticker span.star{color:var(--us-red)}
+.ticker.alt span.star{color:var(--sn-green)}
+/* about */
+.about{background:radial-gradient(circle at 1px 1px,rgba(10,49,97,.16) 1.5px,transparent 2px) 0 0/22px 22px,var(--ivory)}
+.about-main{box-shadow:14px 14px 0 var(--us-red)}
+.about-inset{box-shadow:-10px 10px 0 var(--us-navy)}
+.pull{background:linear-gradient(120deg,var(--us-navy) 0%,#1D4F9E 100%);box-shadow:0 14px 30px rgba(10,49,97,.3)}
+/* cards: red, blue, Senegal green (culture card = the accent), navy */
+.card:nth-child(1){--c:var(--us-red)} .card:nth-child(1) h3{color:var(--us-red)}
+.card:nth-child(2){--c:var(--us-blue)} .card:nth-child(2) h3{color:#1F4FD1}
+.card:nth-child(3){--c:var(--sn-green)} .card:nth-child(3) h3{color:#008A44}
+.card:nth-child(4){--c:var(--us-navy)} .card:nth-child(4) h3{color:var(--us-navy)}
+/* TV */
+.tv{background:var(--stars),radial-gradient(700px 400px at 90% 0%,rgba(200,16,46,.4),transparent 60%),radial-gradient(700px 400px at 0% 100%,rgba(47,107,255,.4),transparent 60%),var(--night)}
+.tv-photo img{box-shadow:0 0 0 6px #fff,0 0 0 10px var(--us-red),0 0 50px rgba(200,16,46,.45)}
+.tv-empty{border-color:#fff}
+.filter[aria-pressed="true"]{background:#fff;color:var(--us-navy);border-color:#fff}
+.vthumb::after{background-color:#fff}
+.vcat{color:#9FC0FF}
+/* diaspora: white with red stripes on the side */
+.diaspora{background:repeating-linear-gradient(180deg,var(--us-red) 0 14px,#fff 14px 28px) left/14px 100% no-repeat,#fff}
+.diaspora .dia-text p{color:#1F2A44}
+.diaspora .eyebrow.green{background:var(--us-red);color:#fff}
+.diaspora .h2{color:var(--us-navy)}
+.dia-main{box-shadow:12px 12px 0 var(--us-navy)}
+.dia-inset{box-shadow:-8px 8px 0 var(--us-red)}
+/* media */
+.media{background:var(--ivory)}
+.media-photo img{box-shadow:10px 10px 0 var(--us-red)}
+.pcard{border-left-color:var(--us-navy)}
+.pcard:nth-child(2){border-left-color:var(--us-red)} .pcard:nth-child(3){border-left-color:var(--us-blue)}
+.pkind{background:var(--us-navy);color:#fff}
+.plink{color:var(--us-navy)}
+/* gallery */
+.gallery .h2{color:#fff}
+.gitem:nth-child(4n+1):hover{box-shadow:0 0 0 4px var(--us-red),0 0 30px rgba(200,16,46,.6)}
+.gitem:nth-child(4n+2):hover{box-shadow:0 0 0 4px #fff,0 0 30px rgba(255,255,255,.5)}
+.gitem:nth-child(4n+3):hover{box-shadow:0 0 0 4px var(--us-blue),0 0 30px rgba(47,107,255,.6)}
+.gitem:nth-child(4n+4):hover{box-shadow:0 0 0 4px var(--us-red),0 0 30px rgba(200,16,46,.6)}
+/* collaborations: red → navy */
+.collab{background:var(--stars),linear-gradient(135deg,var(--us-red) 0%,#8E0C2A 45%,var(--us-navy) 100%)}
+.collab .eyebrow.gold{background:#fff;color:var(--us-red)}
+.collab-photo::after{background:#fff}
+/* contact + social + footer */
+.btn-green{background:linear-gradient(135deg,var(--us-red),#9E0C24);box-shadow:0 10px 26px rgba(200,16,46,.35)}
+.btn-green:hover{background:linear-gradient(135deg,#E0193B,var(--us-red))}
+.social .h2{background:linear-gradient(90deg,var(--us-red),var(--us-navy) 55%,var(--us-blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.foot-right a,.linklike{color:#fff}
