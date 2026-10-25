@@ -17,9 +17,9 @@ window.DALAL_URL = "";
    Set verified: true ONLY after Sankara confirms the account is his.
    ------------------------------------------------------------------------- */
 window.SOCIALS = [
-  { id: "instagram", label: "Instagram", url: "https://www.instagram.com/sankara_mbaye/", verified: false },
+  { id: "tiktok",    label: "TikTok",    url: "https://www.tiktok.com/@sankarambaye", verified: true },
+  { id: "instagram", label: "Instagram", url: "https://www.instagram.com/sankara_mbaye/", verified: true },
   { id: "facebook",  label: "Facebook",  url: "", verified: false },
-  { id: "tiktok",    label: "TikTok",    url: "", verified: false },
   { id: "youtube",   label: "YouTube",   url: "", verified: false }
 ];
 
@@ -135,6 +135,13 @@ window.T = {
     w3_t: "Culture & identité", w3_d: "Un attachement à mes racines sénégalaises, à nos traditions et à cette richesse culturelle que nous partageons au-delà des frontières.",
     w4_t: "Société & actualité", w4_d: "Des réflexions, des échanges et des opinions personnelles sur les sujets qui font l’actualité au Sénégal et dans la diaspora.",
 
+    tv_tiktok_t: "Mes dernières vidéos",
+    tv_tiktok_p: "Regardez mes vidéos directement ici, et abonnez-vous pour ne rien manquer.",
+    col_lead: "Marques, organisateurs, médias et associations : travaillons ensemble pour toucher une communauté sénégalaise engagée, au pays et dans la diaspora.",
+    off1_t: "Contenu sponsorisé", off1: "Présenter votre marque, votre produit ou votre service dans des vidéos pensées pour ma communauté.",
+    off2_t: "Événements", off2: "Animation, présence ou prise de parole lors de vos lancements, soirées culturelles et rencontres de la communauté.",
+    off3_t: "Campagnes culturelles", off3: "Valoriser la culture sénégalaise, une initiative ou une cause à travers des contenus authentiques.",
+    off4_t: "Interviews & médias", off4: "Émissions, podcasts, interviews et collaborations avec d’autres créateurs.",
     tv_label: "Vidéos & directs",
     tv_title: "Bienvenue sur Sankara TV",
     tv_intro: "Retrouvez mes vidéos, mes directs, mes échanges et les moments qui font vivre ma communauté. Entre divertissement, discussions et actualité, découvrez les différentes facettes de mon univers.",
@@ -192,7 +199,7 @@ window.T = {
     pv_p1: "Ce site recueille uniquement les informations que vous saisissez dans le formulaire de contact : votre nom, votre adresse e-mail, votre organisation (facultative), l’objet de votre demande et votre message.",
     pv_p2: "Ces informations servent exclusivement à répondre à votre demande. Elles ne sont ni vendues, ni louées, ni utilisées à des fins publicitaires.",
     pv_p3: "Le site est hébergé par Netlify, qui reçoit et conserve les messages envoyés par le formulaire. Les messages sont supprimés lorsqu’ils ne sont plus utiles au traitement de la demande.",
-    pv_p4: "Le site mémorise votre choix de langue dans votre navigateur. Il n’utilise pas de cookies publicitaires ni d’outil de suivi. Les polices de caractères sont chargées depuis Google Fonts.",
+    pv_p4: "Le site mémorise votre choix de langue dans votre navigateur. Il n’utilise pas de cookies publicitaires ni d’outil de suivi. Les polices de caractères sont chargées depuis Google Fonts. Les vidéos TikTok affichées sur le site sont fournies par TikTok, qui peut déposer ses propres cookies selon sa politique de confidentialité.",
     pv_p5: "Pour demander la consultation ou la suppression de vos informations, écrivez-nous à l’aide du formulaire de contact.",
     pv_close: "Fermer",
 
@@ -236,6 +243,13 @@ window.T = {
     w3_t: "Culture & Identity", w3_d: "A connection to my Senegalese roots, our traditions, and the cultural heritage we share across borders.",
     w4_t: "Society & Current Affairs", w4_d: "Reflections, conversations, and personal perspectives on issues shaping Senegal and its diaspora.",
 
+    tv_tiktok_t: "My latest videos",
+    tv_tiktok_p: "Watch my videos right here, and follow me so you never miss one.",
+    col_lead: "Brands, event organizers, media and associations: let’s work together to reach an engaged Senegalese community, at home and across the diaspora.",
+    off1_t: "Sponsored content", off1: "Feature your brand, product or service in videos made for my community.",
+    off2_t: "Events", off2: "Hosting, appearances or speaking at your launches, cultural nights and community gatherings.",
+    off3_t: "Cultural campaigns", off3: "Promote Senegalese culture, an initiative or a cause through authentic content.",
+    off4_t: "Interviews & media", off4: "Shows, podcasts, interviews and collaborations with other creators.",
     tv_label: "Videos & livestreams",
     tv_title: "Welcome to Sankara TV",
     tv_intro: "Explore my videos, livestreams, conversations, and the moments that bring my community together. From entertainment to current affairs, discover the many sides of my world.",
@@ -293,7 +307,7 @@ window.T = {
     pv_p1: "This website only collects the information you enter in the contact form: your name, email address, organization (optional), inquiry type, and message.",
     pv_p2: "This information is used solely to reply to your inquiry. It is never sold, rented, or used for advertising.",
     pv_p3: "The website is hosted by Netlify, which receives and stores messages sent through the form. Messages are deleted once they are no longer needed to handle the inquiry.",
-    pv_p4: "The website remembers your language choice in your browser. It does not use advertising cookies or tracking tools. Fonts are loaded from Google Fonts.",
+    pv_p4: "The website remembers your language choice in your browser. It does not use advertising cookies or tracking tools. Fonts are loaded from Google Fonts. The TikTok videos shown on the website are provided by TikTok, which may set its own cookies under its privacy policy.",
     pv_p5: "To request access to or deletion of your information, contact us using the contact form.",
     pv_close: "Close",
 
@@ -307,3 +321,13 @@ window.T = {
     cap_col: "Sankara Mbaye in a turquoise polo by the water"
   }
 };
+
+/* Press text keys (used by the static press cards in index.html) */
+(window.PRESS || []).forEach(function (p, i) {
+  ["fr", "en"].forEach(function (l) {
+    window.T[l]["pr" + i + "_kind"] = p.kind[l];
+    window.T[l]["pr" + i + "_title"] = p.title[l];
+    window.T[l]["pr" + i + "_desc"] = p.desc[l];
+    window.T[l]["pr" + i + "_link"] = (l === "fr" ? "Lire sur " : "Read on ") + p.outlet + " ↗";
+  });
+});

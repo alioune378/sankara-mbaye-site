@@ -36,7 +36,7 @@
     if (lang === "fr") u.searchParams.delete("lang"); else u.searchParams.set("lang", lang);
     history.replaceState(null, "", u.pathname + u.search + u.hash);
     updateSeoLinks();
-    renderTV(); renderPress(); renderSocials(); renderGallery(); renderCredit(); renderTickers();
+    renderTV(); renderSocials(); renderGallery(); renderCredit(); renderTickers();
     clearFormErrors();
   }
 
@@ -74,7 +74,8 @@
     var vids = (window.VIDEOS || []).filter(function (v) { return (v.type === "youtube" && v.id) || (v.type === "link" && v.url); });
     if (!vids.length) {
       var socials = verifiedSocials();
-      box.innerHTML = '<div class="tv-empty"><h3>' + esc(t("tv_empty_t")) + "</h3><p>" + esc(socials.length ? t("tv_empty_p") : t("tv_empty_nosocial")) + "</p>" +
+      var hasTT = socials.some(function (s) { return s.id === "tiktok"; });
+      box.innerHTML = '<div class="tv-empty"><h3>' + esc(t(hasTT ? "tv_tiktok_t" : "tv_empty_t")) + "</h3><p>" + esc(hasTT ? t("tv_tiktok_p") : (socials.length ? t("tv_empty_p") : t("tv_empty_nosocial"))) + "</p>" +
         (socials.length ? '<div class="socials" style="justify-content:flex-start">' + socials.map(socialBtn).join("") + "</div>" : "") + "</div>";
       return;
     }

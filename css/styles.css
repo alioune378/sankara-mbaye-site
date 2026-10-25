@@ -488,3 +488,12 @@ a{color:var(--gold-l)}
 /* privacy + lightbox */
 .privacy{background:var(--ink-3);color:#E9E6DF;border:1px solid var(--line-gold)}
 .privacy h2{color:#fff}
+
+/* TikTok feed + partnership offers */
+.tiktok-feed{margin-top:28px;display:flex;justify-content:center}
+.tiktok-feed .tiktok-embed{margin:0!important;border-radius:16px;overflow:hidden}
+.offers{list-style:none;padding:0;margin:22px 0 30px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.offers li{border:1px solid var(--line-gold);background:rgba(255,255,255,.03);padding:16px 18px;display:flex;flex-direction:column;gap:4px}
+.offers strong{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.03em;font-size:20px;color:var(--gold-l)}
+.offers span{color:#BDB8AD;font-size:14.5px;line-height:1.55}
+@media (max-width:640px){.offers{grid-template-columns:1fr}}
