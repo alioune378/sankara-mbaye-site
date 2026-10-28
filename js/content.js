@@ -2,14 +2,14 @@
    SANKARA MBAYE — CONTENT FILE
    Everything that changes over time lives here: texts (FR/EN), videos,
    press articles, social links and photo captions.
-   Built by DALAL STUDIO.
+   Built by DALAL TECHNOLOGIES.
    ========================================================================= */
 
 /* Final domain, once purchased (e.g. "https://www.sankarambaye.com").
    Leave empty until then: canonical / hreflang / Open Graph URLs are added automatically when set. */
 window.SITE_URL = "";
 
-/* DALAL STUDIO website, once online. Leave empty to show the credit without a link. */
+/* DALAL TECHNOLOGIES website, once online. Leave empty to show the credit without a link. */
 window.DALAL_URL = "";
 
 /* -------------------------------------------------------------------------

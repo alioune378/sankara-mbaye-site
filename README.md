@@ -1,11 +1,11 @@
 # Sankara Mbaye — site officiel / official website
 
-Site statique bilingue (FR/EN) conçu par DALAL STUDIO. Hébergement : Netlify (publish = racine).
+Site statique bilingue (FR/EN) conçu par DALAL TECHNOLOGIES. Hébergement : Netlify (publish = racine).
 
 ## Mettre à jour le contenu
 Tout le contenu modifiable est dans `js/content.js` :
 - `SITE_URL` — le domaine final (active canonical, hreflang, Open Graph).
-- `DALAL_URL` — lien vers le site de Dalal Studio (crédit en bas de page).
+- `DALAL_URL` — lien vers le site de Dalal Technologies (crédit en bas de page).
 - `SOCIALS` — un réseau ne s'affiche que si `verified: true` et une `url`.
 - `VIDEOS` — `{ type:"youtube", id:"...", category:"humour|famille|lives|societe|culture", featured:true, title:{fr,en} }`.
 - `PRESS`, `GALLERY`, et les textes `T.fr` / `T.en`.

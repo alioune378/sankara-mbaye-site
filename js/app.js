@@ -1,4 +1,4 @@
-/* SANKARA MBAYE — site logic. Built by DALAL STUDIO. */
+/* SANKARA MBAYE — site logic. Built by DALAL TECHNOLOGIES. */
 (function () {
   "use strict";
   var LANGS = ["fr", "en"];
@@ -128,7 +128,7 @@
   }
   function renderCredit() {
     var c = $("#dalalCredit"); if (!c) return;
-    c.innerHTML = window.DALAL_URL ? '<a href="' + esc(window.DALAL_URL) + '" target="_blank" rel="noopener">DALAL STUDIO</a>' : "DALAL STUDIO";
+    c.innerHTML = window.DALAL_URL ? '<a href="' + esc(window.DALAL_URL) + '" target="_blank" rel="noopener">DALAL TECHNOLOGIES</a>' : "DALAL TECHNOLOGIES";
   }
 
   /* ---------- gallery + lightbox ---------- */
